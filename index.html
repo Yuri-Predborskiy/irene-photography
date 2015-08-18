@@ -185,13 +185,12 @@
             return false;
         });
         
+        $('#image-overlay-box').on("click",function () {
+            buttonNextPicture();
+        });
+        
         $('.next-button').on("click",function () {
-            $("#image-overlay-box").fadeOut('fast',function() {
-                var currentPic = $('.activePicture');
-                selectNextPicture(currentPic,".image-holder","activePicture");
-                showGalleryOverlay(currentPic);
-            });
-            $("#image-overlay-box").fadeIn('fast');
+            buttonNextPicture();
         });
 
         $('.prev-button').on("click",function () {
@@ -212,6 +211,16 @@
         
         // hide overlay when clicked on X or background
         $('.close').on('click',function() { hideOverlay(); });
+        
+        // shows next image in series
+        function buttonNextPicture() {
+            $("#image-overlay-box").fadeOut('fast',function() {
+                var currentPic = $('.activePicture');
+                selectNextPicture(currentPic,".image-holder","activePicture");
+                showGalleryOverlay(currentPic);
+            });
+            $("#image-overlay-box").fadeIn('fast');
+        }
         
         // sets the next image in image_class to be active_class
         function selectNextPicture(item,image_class,active_class) {
