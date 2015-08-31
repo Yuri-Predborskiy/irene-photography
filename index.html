@@ -12,6 +12,15 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link rel="stylesheet" type="text/css" href="styles/home-page.css" />
     <style>
+        .home-button {
+            height: 150px;
+            width: 600px;
+            background-position: center;
+            background-image: url(images/Logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
         .overlay{
             display: none;
             /*background: transparent url(images/overlay.png) repeat top left;*/
@@ -89,6 +98,7 @@
         }
         
         .image-gallery {
+            width: 960px;
             padding: 0;
             margin: 0 auto;
         }
@@ -110,53 +120,52 @@
         <div class="navigation-wrapper">
             <div class="fixedwidth">
                 <div class="navigation">
-
                     <a href="index.html">
                         <div class="home-button">
-                            <img src="images/camera-icon.png" width="40" />
-                            <span>Irene Photography</span>
                         </div>
                     </a>
-                        <ul class="navigation-menu">
-                            <a href="index.html">
-                                <li class="active">Home</li>
-                            </a>
-                            <a href="gallery.html">
-                                <li>Gallery</li>
-                            </a>
-                            <a href="contact.html">
-                                <li>Contact</li>
-                            </a>
-                        </ul>
-                        <div class="clearfix"></div>
+                    <ul class="navigation-menu">
+                        <a href="index.html">
+                            <li class="active">Home</li>
+                        </a>
+                        <a href="gallery.html">
+                            <li>Gallery</li>
+                        </a>
+                        <a href="contact.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
                     <div class="clearfix"></div>
                 </div>
             </div>
         </div>
-        <div class="content-wrapper">
-            <div class="fixedwidth">
-                <div class="top-to-bottom">
-                    <!-- purely aestetic element -->
-                </div>
-                <div class="content">
-                    <div class="main-content">
-                        <ul class="image-gallery">
-                            <li class="image-item">
-                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image1.jpg">
-                            </li>
-                            <li class="image-item">
-                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image2.jpg">
-                            </li>
-                            <li class="image-item">
-                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image3.jpg">
-                            </li>
-                        </ul>
-                        <h2 class="copyright">Copyright 2015</h2>
-                    </div>
-                </div>
+        
+        <div id="content-wrapper">
+            <div class="content-background"></div>
+            <div class="content">
+                <h1 class="page-name">Home Page</h1>
+                <ul class="image-gallery">
+                    <li class="image-item">
+                        <img class="scale" data-scale="best-fill" data-align="center" src="images/image1.jpg">
+                    </li>
+                    <li class="image-item">
+                        <img class="scale" data-scale="best-fill" data-align="center" src="images/image2.jpg">
+                    </li>
+                    <li class="image-item">
+                        <img class="scale" data-scale="best-fill" data-align="center" src="images/image3.jpg">
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
             </div>
             <div class="clearfix"></div>
+            <div id="footer">
+                <h2 class="copyright">Copyright © 2015 Yuri Predborskiy. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders.</h2>
+            </div>
         </div>
+        
+    </div>
+        
+    
         
         <div class="extra-items">
             <a class="close">
