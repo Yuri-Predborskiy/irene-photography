@@ -87,6 +87,20 @@
             right: -50px;
             background-image: url(images/64x64-next-white.png);
         }
+        
+        .image-gallery {
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        .image-item {
+            float: left;
+            width: 280px;
+            height: 210px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        
     </style>
 </head>
     
@@ -121,39 +135,22 @@
         </div>
         <div class="content-wrapper">
             <div class="fixedwidth">
-                <div class="top-to-bottom"></div>
+                <div class="top-to-bottom">
+                    <!-- purely aestetic element -->
+                </div>
                 <div class="content">
                     <div class="main-content">
-                        <div class="image-gallery-preview">
-                            <div class="image-holder">
-                                <div class="image-border">
-                                    <a href="images/image1.jpg">
-                                        <div class="image-div">
-                                            <img class="scale" data-scale="best-fill" data-align="center" src="images/image1.jpg">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-holder">
-                                <div class="image-border">
-                                    <a href="images/image2.jpg">
-                                        <div class="image-div">
-                                            <img class="scale" data-scale="best-fill" data-align="center" src="images/image2.jpg">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-holder">
-                                <div class="image-border">
-                                    <a href="images/image3.jpg">
-                                        <div class="image-div">
-                                            <img class="scale" data-scale="best-fill" data-align="center" src="images/image3.jpg">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
+                        <ul class="image-gallery">
+                            <li class="image-item">
+                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image1.jpg">
+                            </li>
+                            <li class="image-item">
+                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image2.jpg">
+                            </li>
+                            <li class="image-item">
+                                <img class="scale" data-scale="best-fill" data-align="center" src="images/image3.jpg">
+                            </li>
+                        </ul>
                         <h2 class="copyright">Copyright 2015</h2>
                     </div>
                 </div>
@@ -179,7 +176,8 @@
 
     <script>
         // show overlay and gallery when user clicks on image
-        $(".image-holder").on("click",function() {
+        var image_class_name = ".image-item";
+        $(image_class_name).on("click",function() {
             $(this).addClass("activePicture");
             showGalleryOverlay(this);
             return false;
@@ -196,7 +194,7 @@
         $('.prev-button').on("click",function () {
             $("#image-overlay-box").fadeOut('fast',function() {
                 var currentPic = $('.activePicture');
-                selectPrevPicture(currentPic,".image-holder","activePicture");
+                selectPrevPicture(currentPic,image_class_name,"activePicture");
                 showGalleryOverlay(currentPic);
             });
             $("#image-overlay-box").fadeIn('fast');
@@ -216,7 +214,7 @@
         function buttonNextPicture() {
             $("#image-overlay-box").fadeOut('fast',function() {
                 var currentPic = $('.activePicture');
-                selectNextPicture(currentPic,".image-holder","activePicture");
+                selectNextPicture(currentPic,image_class_name,"activePicture");
                 showGalleryOverlay(currentPic);
             });
             $("#image-overlay-box").fadeIn('fast');
@@ -262,7 +260,7 @@
         function resizeImage(obj) {
             var height = obj.height;
             var width = obj.width;
-            console.log("img size: "+width+" x "+height);
+            //console.log("img size: "+width+" x "+height);
             x = ($(window).width() - width)/2;
             y = ($(window).height() - height)/2;
             var styles = {
