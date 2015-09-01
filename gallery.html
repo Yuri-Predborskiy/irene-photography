@@ -11,7 +11,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <style>
-        .home-button {
+        #logo {
+            margin: 30px auto;
+/*            padding: 30px 0;*/
             height: 150px;
             width: 600px;
             background-position: center;
@@ -19,6 +21,7 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
+        
         
         .overlay{
             display: none;
@@ -118,25 +121,24 @@
     <div class="background-image-fixed-position"></div>
     <div class="wrapper">
         <div class="navigation-wrapper">
-            <div class="fixedwidth">
-                <div class="navigation">
-                    <a href="index.html">
-                        <div class="home-button">
-                        </div>
-                    </a>
-                    <ul class="navigation-menu">
-                        <a href="index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="gallery.html">
-                            <li class="active">Gallery</li>
-                        </a>
-                        <a href="contact.html">
-                            <li>Contact</li>
-                        </a>
-                    </ul>
-                    <div class="clearfix"></div>
+            <a href="index.html">
+                <div id="logo">
                 </div>
+            </a>
+            <div class="clearfix"></div>
+            <div class="navigation">
+                <ul class="navigation-menu">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="gallery.html">
+                        <li class="active">Gallery</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <div class="clearfix"></div>
+                </ul>
             </div>
         <div class="clearfix"></div>
         </div>
@@ -178,7 +180,6 @@
                 <h2 class="copyright">Copyright © 2015 Yuri Predborskiy. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders.</h2>
             </div>
         </div>
-    </div>
         
 
         <div class="extra-items">
