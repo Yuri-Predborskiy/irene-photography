@@ -43,7 +43,6 @@
         }
         
         .navigation {
-            display: table;
             margin: 0 auto;
             font-size: 20px;
             padding: 30px 0;
@@ -54,14 +53,28 @@
 }
         
         .navigation-menu li {
-            float: left;
+            width: 100%;
             padding: 10px 15px;
-            margin: 5px;
+            margin: 0;
             color: white;
             font-size: 1.2em;
             text-shadow: 0 0 7px rgba(0,0,0,0.5);
             opacity: 0.7;
+            text-align: center;
         }
+
+.navigation-menu a {
+    float: left;
+    display: block;
+    width: 30%;
+    margin: 0;
+    margin-right: 5%;
+    text-decoration: none;
+}
+
+.navigation-menu a:last-child {
+    margin-right: 0;
+}
         
         .navigation-menu li.active {
             opacity: 1;

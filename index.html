@@ -15,6 +15,7 @@
         .home-button {
             height: 150px;
             width: 600px;
+            margin: 0 auto;
             background-position: center;
             background-image: url(images/Logo.png);
             background-size: contain;
@@ -148,6 +149,7 @@
             margin: 0;
             padding: 5%;
             overflow: hidden;
+            text-align: center;
         }
         
     </style>
@@ -157,25 +159,23 @@
     <div class="background-image-fixed-position"></div>
     <div class="wrapper">
         <div class="navigation-wrapper">
-            <div class="fixedwidth">
-                <div class="navigation">
+            <div class="navigation">
+                <a href="index.html">
+                    <div class="home-button">
+                    </div>
+                </a>
+                <ul class="navigation-menu">
                     <a href="index.html">
-                        <div class="home-button">
-                        </div>
+                        <li class="active">Home</li>
                     </a>
-                    <ul class="navigation-menu">
-                        <a href="index.html">
-                            <li class="active">Home</li>
-                        </a>
-                        <a href="gallery.html">
-                            <li>Gallery</li>
-                        </a>
-                        <a href="contact.html">
-                            <li>Contact</li>
-                        </a>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
+                    <a href="gallery.html">
+                        <li>Gallery</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+                <div class="clearfix"></div>
             </div>
         </div>
         <div id="content-wrapper">
