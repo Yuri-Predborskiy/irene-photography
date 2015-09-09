@@ -111,6 +111,45 @@
             border-radius: 5px;
         }
         
+        .tile {
+            position: relative;
+            float: left;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 35%;
+        }
+        
+        .pink {
+            background-color: pink;
+        }
+        
+        .yellow {
+            background-color: lightyellow;
+        }
+        
+        .green {
+            background-color: greenyellow;
+        }
+        
+        .purple {
+            background-color: paleturquoise;
+        }
+        
+        .tile .section-name {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        
+        .tile .inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 5%;
+            overflow: hidden;
+        }
+        
     </style>
 </head>
     
@@ -139,10 +178,30 @@
                 </div>
             </div>
         </div>
-        
         <div id="content-wrapper">
             <div class="content-background"></div>
             <div class="content">
+                <div class="tile pink">
+                    <div class="inner">
+                        <span class="section-name">Kids</span>
+                    </div>
+                </div>
+                <div class="tile yellow">
+                    <div class="inner">
+                        <span class="section-name">Image of kids</span>
+                    </div>
+                </div>
+                <div class="tile green">
+                    <div class="inner">
+                        <span class="section-name">Image of grown-ups</span>
+                    </div>
+                </div>
+                <div class="tile purple">
+                    <div class="inner">
+                        <span class="section-name">Grown-ups</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
                 <h1 class="page-name">Home Page</h1>
                 <ul class="image-gallery">
                     <li class="image-item">
@@ -162,10 +221,6 @@
                 <h2 class="copyright">Copyright © 2015 Yuri Predborskiy. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders.</h2>
             </div>
         </div>
-        
-    </div>
-        
-    
         
         <div class="extra-items">
             <a class="close">
