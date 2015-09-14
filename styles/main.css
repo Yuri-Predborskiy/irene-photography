@@ -32,9 +32,6 @@
             padding: 0;
         }
         
-        .fixedwidth {
-        }
-        
         .navigation-wrapper {
             z-index: 20;
             width: 100%;
@@ -50,12 +47,12 @@
         
 .navigation-menu {
     padding: 0;
+    width: 600px;
+    margin: 0 auto;
 }
         
         .navigation-menu li {
-            width: 100%;
             padding: 10px 15px;
-            margin: 0;
             color: white;
             font-size: 1.2em;
             text-shadow: 0 0 7px rgba(0,0,0,0.5);
@@ -65,9 +62,7 @@
 
 .navigation-menu a {
     float: left;
-    display: block;
     width: 30%;
-    margin: 0;
     margin-right: 5%;
     text-decoration: none;
 }
@@ -85,7 +80,6 @@
             opacity: 1;
             text-shadow: 0 0 7px rgba(0,0,0,0.75);
         }
-        
         
         .clearfix {
             clear: both;
@@ -106,15 +100,11 @@
         #content-wrapper {
             position: relative;
             z-index: 1500;
-            min-width: 1200px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            
         }
         
         .content {
             position: relative;
+            min-width: 1200px;
             width: 100%;
             margin: 0 auto;
             padding-top: 30px;
@@ -141,7 +131,6 @@
 #footer {
     z-index: 1000;
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     margin: 0 auto;
 }
-

@@ -11,8 +11,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link rel="stylesheet" type="text/css" href="styles/home-page.css" />
-    <style>
-        .home-button {
+    <style>        
+        #logo {
             height: 150px;
             width: 600px;
             margin: 0 auto;
@@ -22,9 +22,9 @@
             background-repeat: no-repeat;
         }
         
+
         .overlay{
             display: none;
-            /*background: transparent url(images/overlay.png) repeat top left;*/
             background-color: #050505;
             opacity: 0.8;
             position: fixed;
@@ -40,12 +40,6 @@
             position: fixed;
             top: 0;
             left: 0;
-            /*
-            top: 5%;
-            left: 5%;
-            bottom: 5%;
-            right: 5%;
-            */
             margin: 0;
             z-index: 5100;
         }
@@ -98,18 +92,8 @@
             background-image: url(images/64x64-next-white.png);
         }
         
-        .image-gallery {
-            width: 960px;
-            padding: 0;
-            margin: 0 auto;
-        }
-        
-        .image-item {
-            float: left;
-            width: 280px;
-            height: 210px;
-            margin: 10px;
-            border-radius: 5px;
+        .jumbothing {
+            margin-top: 1em;
         }
         
         .tile {
@@ -118,11 +102,8 @@
             width: 25%;
             margin: 0;
             padding: 0;
-            padding-bottom: 20%;
-        }
-        
-        .text {
-            background-color: lightgrey;
+            padding-bottom: 17%;
+            background-color: #F6CFD4;
         }
         
         .pink {
@@ -137,8 +118,10 @@
             background-color: greenyellow;
         }
         
-        .purple {
-            background-color: paleturquoise;
+        .tile .pets {
+            background-image: url(images/image7.jpg);
+            background-position: center;
+            background-size: cover;
         }
         
         .tile .section-name {
@@ -167,7 +150,7 @@
         <div class="navigation-wrapper">
             <div class="navigation">
                 <a href="index.html">
-                    <div class="home-button">
+                    <div id="logo">
                     </div>
                 </a>
                 <ul class="navigation-menu">
@@ -189,48 +172,52 @@
             <div class="content">
                 <span class="page-name">Home Page</span>
                 <span class="page-name">Warning: site is under construction</span>
-                <div class="tile pink">
-                    <div class="inner">
-                        <span class="section-name">Kids</span>
+                <div class="jumbothing">
+                    <div class="tile pink">
+                        <div class="inner">
+                            <span class="section-name">Amazing people</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile text">
-                    <div class="inner">
-                        <span class="section-name">Kids</span>
+                    <div class="tile text">
+                        <div class="inner">
+                            <span class="section-name">Дивовижні люди</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile yellow">
-                    <div class="inner">
-                        <span class="section-name">Image of kids</span>
+                    <div class="tile yellow">
+                        <div class="inner">
+                            <span class="section-name">Unforgettable Moments</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile text">
-                    <div class="inner">
-                        <span class="section-name">Kids</span>
+                    <div class="tile text">
+                        <div class="inner">
+                            <span class="section-name">Незабутні моменти</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile text">
-                    <div class="inner">
-                        <span class="section-name">Kids</span>
+                    <div class="tile text">
+                        <div class="inner">
+                            <span class="section-name">Прекрасна природа</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile green">
-                    <div class="inner">
-                        <span class="section-name">Image of grown-ups. This text will exceed the size of its element</span>
+                    <div class="tile green">
+                        <div class="inner">
+                            <span class="section-name">Beautiful nature</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile text">
-                    <div class="inner">
-                        <span class="section-name">Kids</span>
+                    <div class="tile text">
+                        <div class="inner">
+                            <span class="section-name">Симпатичні тваринки</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tile purple">
-                    <div class="inner">
-                        <span class="section-name">Grown-ups</span>
+                    <div class="tile">
+                        <div class="inner pets">
+                            <span class="section-name">Always Cute Pets</span>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
                 
+<!--
+        Image gallery - tags for example
                 <ul class="image-gallery">
                     <li class="image-item">
                         <img class="scale" data-scale="best-fill" data-align="center" src="images/image1.jpg">
@@ -243,8 +230,10 @@
                     </li>
                     <div class="clearfix"></div>
                 </ul>
+-->
             </div>
             <div class="clearfix"></div>
+            
             <div id="footer">
                 <h2 class="copyright">Copyright © 2015 Yuri Predborskiy. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders.</h2>
             </div>
@@ -291,14 +280,7 @@
             });
             $("#image-overlay-box").fadeIn('fast');
         });
-            // $("#image-overlay-box").fadeOut(300);
-            // replace old image with new image
             
-            // re-calculate image, as if user clicks on the next image
-            
-            // fade in
-            // $("#image-overlay-box").fadeIn(300);
-        
         // hide overlay when clicked on X or background
         $('.close').on('click',function() { hideOverlay(); });
         
@@ -335,13 +317,10 @@
         }
 
         function showGalleryOverlay(item) {
-            // copy content from element into overlay
-            //$("#image-overlay-box").html($(item).html());
+            // read source of img tag, save it, use link in new overlay img
             imageLink = $(".activePicture").find("img").attr('src');
             imageString = '<img src="'+imageLink+'" onload="resizeImage(this)" />';
             $("#image-overlay-box").html(imageString);
-            //$("#image-overlay-box").children(".exec-bio").removeClass("hidden");
-            
             // positioning the element in the middle of the window
             positionOverlay();
             
@@ -352,7 +331,6 @@
         function resizeImage(obj) {
             var height = obj.height;
             var width = obj.width;
-            //console.log("img size: "+width+" x "+height);
             x = ($(window).width() - width)/2;
             y = ($(window).height() - height)/2;
             var styles = {
@@ -362,67 +340,19 @@
                 "height": height
             };
             $(".box-holder").css(styles);
-            /*
-            winX = $(window).width();
-            winY = $(window).height();
-            
-            blockX = $("#image-overlay-box").width();
-            blockY = $("#image-overlay-box").height();
-            
-            img = new Image();
-            x = $("#image-overlay-box img")
-            shiftX = Math.min(5,x); (winX - blockX) / 2;
-            shiftY = (winY - blockY) / 2;
-            
-            if(shiftX < 0) shiftX = 0;
-            if(shiftY < 0) shiftY = 0;
-            
-            $(".box-holder").css("top",shiftY);
-            $(".box-holder").css("left",shiftX);
-            $("#image-overlay-box");
-            */
-        }
-        
-        // if window is resized - reposition overlay
-        $(window).resize(function() {
-            positionOverlay();
-
-        });
-        
-        // calculate middle of the page position for overlay
-        
-        function positionOverlay() {
-//            winX = $(window).width();
-//            winY = $(window).height();
-//            
-//            blockX = $("#image-overlay-box").width();
-//            blockY = $("#image-overlay-box").height();
-//            
-//            shiftX = (winX - blockX) / 2;
-//            shiftY = (winY - blockY) / 2;
-//            
-//            if(shiftX < 0) shiftX = 0;
-//            if(shiftY < 0) shiftY = 0;
-//            
-//            $(".box-holder").css("top",shiftY);
-//            $(".box-holder").css("left",shiftX);
-            return;
         }
         
         // make overlay visible
         function showOverlay() {
             $('#overlay').fadeIn('fast',function() {
                 $('.box-holder').css("display","block");
-                //$(".wrapper").addClass("fixed-position"); // block background scrolling
             });
-            //$('body').css('overflow','hidden');
         }
         
         // make overlay invisible
         function hideOverlay() {
             $('.box-holder').css("display","none");
             $('#overlay').fadeOut('fast');
-            //$(".wrapper").removeClass("fixed-position"); // allow scrolling
             $('body').css('overflow','auto');
             $(".activePicture").removeClass("activePicture");
         }
