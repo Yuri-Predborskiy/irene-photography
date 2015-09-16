@@ -16,7 +16,7 @@ ul {
     width: 600px;
     margin: 0 auto;
     background-position: center;
-    background-image: url(images/Logo.png);
+    background-image: url(../images/Logo.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -41,6 +41,7 @@ ul {
     z-index: 10;
     margin: 0;
     padding: 0;
+    min-width: 1200px;
 }
 
 .navigation-wrapper {
@@ -115,7 +116,6 @@ ul {
         
         .content {
             position: relative;
-            min-width: 1200px;
             width: 100%;
             margin: 0 auto;
             padding-top: 30px;
