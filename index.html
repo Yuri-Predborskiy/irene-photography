@@ -20,11 +20,18 @@
         .tile {
             position: relative;
             float: left;
-            width: 25%;
+            width: 23%;
             margin: 0;
             padding: 0;
-            padding-bottom: 17%;
+            padding-bottom: 18%;
             background-color: #F6CFD4;
+        }
+        .tile:nth-child(4n+1) {
+            margin-left: 4%;
+        }
+        
+        .tile:nth-child(4n) {
+            margin-right: 4%;
         }
         
         .pink {
@@ -47,7 +54,7 @@
         
         .tile .section-name {
             display: block;
-            font-size: 3em;
+            font-size: 2em;
             font-weight: bold;
             text-align: center;
             padding: 0.3em;
@@ -89,7 +96,7 @@
             </div>
         </div>
         <div id="content-wrapper">
-            <div class="content-background"></div>
+<!--            <div class="content-background"></div>-->
             <div class="content">
                 <span class="page-name">Home Page</span>
                 <span class="page-name">Warning: site is under construction</span>
