@@ -16,16 +16,22 @@
         .jumbothing {
             margin-top: 1em;
         }
+        .content {
+            margin: 0 2%;
+        }
         
         .tile {
             position: relative;
             float: left;
-            width: 23%;
+/*            width: 23%;*/
+            width: 24%;
             margin: 0;
             padding: 0;
-            padding-bottom: 18%;
-            background-color: #F6CFD4;
+            padding-bottom: 25%;
+            background-color: #FCEEFC;
         }
+        
+/*
         .tile:nth-child(4n+1) {
             margin-left: 4%;
         }
@@ -33,7 +39,9 @@
         .tile:nth-child(4n) {
             margin-right: 4%;
         }
+*/
         
+/*
         .pink {
             background-color: pink;
         }
@@ -45,9 +53,31 @@
         .green {
             background-color: greenyellow;
         }
+*/
+        .tile.text {
+            opacity: 0.5;
+        }
         
         .tile .pets {
-            background-image: url(images/image7.jpg);
+            background-image: url(images/pets/DSC_5855.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .tile.nature {
+            background-image: url(images/nature/DSC_7216.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .tile.family {
+            background-image: url(images/family/DSC_7504.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .tile.portrait {
+            background-image: url(images/portrait/DSC_8435.jpg);
             background-position: center;
             background-size: cover;
         }
@@ -101,9 +131,9 @@
                 <span class="page-name">Home Page</span>
                 <span class="page-name">Warning: site is under construction</span>
                 <div class="jumbothing">
-                    <div class="tile pink">
+                    <div class="tile portrait">
                         <div class="inner">
-                            <span class="section-name">Amazing people</span>
+<!--                            <span class="section-name">Amazing people</span>-->
                         </div>
                     </div>
                     <div class="tile text">
@@ -111,9 +141,9 @@
                             <span class="section-name">Дивовижні люди</span>
                         </div>
                     </div>
-                    <div class="tile yellow">
+                    <div class="tile family">
                         <div class="inner">
-                            <span class="section-name">Unforgettable Moments</span>
+<!--                            <span class="section-name">Unforgettable Moments</span>-->
                         </div>
                     </div>
                     <div class="tile text">
@@ -126,9 +156,9 @@
                             <span class="section-name">Прекрасна природа</span>
                         </div>
                     </div>
-                    <div class="tile green">
+                    <div class="tile nature">
                         <div class="inner">
-                            <span class="section-name">Beautiful nature</span>
+<!--                            <span class="section-name">Beautiful nature</span>-->
                         </div>
                     </div>
                     <div class="tile text">
@@ -138,7 +168,7 @@
                     </div>
                     <div class="tile">
                         <div class="inner pets">
-                            <span class="section-name">Always Cute Pets</span>
+<!--                            <span class="section-name">Always Cute Pets</span>-->
                         </div>
                     </div>
                 </div>
