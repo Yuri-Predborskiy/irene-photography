@@ -48,7 +48,9 @@
         .pswp__bg {
             background: #333 !important;
         }
-        
+        .niceFooter {
+            padding: 15px;
+        }
     </style>
 </head>
     
@@ -97,56 +99,62 @@
     </div>
             <!-- imitated JSON reply from server with list of images for the gallery -->
             <p id="imageList" class="hidden">
-            [ 
-                {
-                    "src": "images/nature/DSC_7216.jpg",
-                    "w": 1200,
-                    "h": 795
-                },
-                {
-                    "src": "images/nature/DSC_7218.jpg",
-                    "w": 1200,
-                    "h": 795
-                },
-                {
-                    "src": "images/nature/DSC_7804.jpg",
-                    "w": 2000,
-                    "h": 1330
-                },
-                {
-                    "src": "images/nature/DSC_8271.jpg",
-                    "w":2000,
-                    "h":1325
-                },
-                {
-                    "src": "images/nature/DSC_8275.jpg",
-                    "w":2000,
-                    "h":1325
-                },
-                {
-                    "src": "images/nature/DSC_8279.jpg",
-                    "w":1350,
-                    "h":858
-                },
-                {
-                    "src": "images/nature/DSC_50052.jpg",
-                    "w":1000,
-                    "h":663
-                }
-            ]
+                [
+                    {
+                        "src": "images/nature/DSC_7216.jpg",
+                        "msrc": "images/nature/DSC_7216_t.jpg",
+                        "w":1200,
+                        "h":795
+                    },
+                    {
+                        "src": "images/nature/DSC_7218.jpg",
+                        "msrc": "images/nature/DSC_7218_t.jpg",
+                        "w":1200,
+                        "h":795
+                    },
+                    {
+                        "src": "images/nature/DSC_7804.jpg",
+                        "msrc": "images/nature/DSC_7804_t.jpg",
+                        "w":2000,
+                        "h":1330
+                    },
+                    {
+                        "src": "images/nature/DSC_8271.jpg",
+                        "msrc": "images/nature/DSC_8271_t.jpg",
+                        "w":2000,
+                        "h":1325
+                    },
+                    {
+                        "src": "images/nature/DSC_8275.jpg",
+                        "msrc": "images/nature/DSC_8275_t.jpg",
+                        "w":2000,
+                        "h":1325
+                    },
+                    {
+                        "src": "images/nature/DSC_8279.jpg",
+                        "msrc": "images/nature/DSC_8279_t.jpg",
+                        "w":1350,
+                        "h":858
+                    },
+                    {
+                        "src": "images/nature/DSC_50052.jpg",
+                        "msrc": "images/nature/DSC_50052_t.jpg",
+                        "w":1000,
+                        "h":663
+                    }
+                ]
             </p>
 
     <div class="container">
         <div class="row my-gallery" itemscope itemtype="http://schema.org/ImageGallery" id="img-gallery">
         </div>
     </div>
-
-
     
-        <hr class="clearfix">
+    <hr>
 
+    <div class="container">
         <footer>
-            <p>&copy; 2015 Company, Inc.</p>
+            <p class="pull-right">Made by <a href="https://www.linkedin.com/in/yuri-predborskiy-06135226">Yuri Predborski</a></p>
         </footer>
     </div> <!-- /container -->
 
@@ -228,7 +236,6 @@
         var imageHTML = "<figure class=\"col-xs-12 col-sm-6 col-md-4\" itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n<a href=\"{imageSource}\" itemprop=\"contentUrl\" data-size=\"{imageSize}\">\n<img class=\"img-responsive\" src=\"{imageThumb}\" itemprop=\"thumbnail\" />\n</a>\n</figure>";
         // generate images based on JSON request (imitated) and appended them to the page
         itemArray.forEach(function(item) {
-            item.msrc = item.src.replace(".jpg","_t.jpg");
             var imageTags = imageHTML.replace("{imageSource}", item.src);
             var imageTags = imageTags.replace("{imageSize}", (""+item.w+"x"+item.h));
             var imageTags = imageTags.replace("{imageThumb}", item.msrc);
