@@ -75,7 +75,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" onclick="startGallery()">Action</a></li>
+                                    <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
                                 </ul>
@@ -91,7 +91,6 @@
     <div class="jumbotron">
         <div class="container">
             <h1>Nature gallery</h1>
-            <button onclick="startGallery()">Start gallery</button>
         </div>
     </div>
             <!-- imitated JSON reply from server with list of images for the gallery -->
@@ -144,6 +143,16 @@
 
     <div class="container">
         <div class="row my-gallery" itemscope itemtype="http://schema.org/ImageGallery" id="img-gallery">
+            <figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+                <a href="images/nature/DSC_7216.jpg" itemprop="contentUrl" data-size="1200x795">
+                    <img src="images/nature/DSC_7216_t.jpg" itemprop="thumbnail">
+                </a>
+            </figure>
+            <figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+                <a href="images/nature/DSC_7218.jpg" itemprop="contentUrl" data-size="1200x795">
+                    <img src="images/nature/DSC_7218_t.jpg" itemprop="thumbnail">
+                </a>
+            </figure>
         </div>
     </div>
     
@@ -237,7 +246,6 @@
             var imageTags = imageTags.replace("{imageSize}", (""+item.w+"x"+item.h));
             var imageTags = imageTags.replace("{imageThumb}", item.msrc);
             $(gallerySelector).append(imageTags);
-            console.log('thumb:' + item.msrc);
         });
         
         
@@ -256,9 +264,10 @@
                         // get element we clicked on to determine its position in window
                         var thumbnail = event.target;
                         // get position of element relative to viewport
-                        var rect = thumbnail.getBoundingClientRect(); 
+                        var rect = thumbnail.getBoundingClientRect();
                         // get window scroll Y
-                        var pageYScroll = window.pageYOffset || document.documentElement.scrollTop; 
+                        var pageYScroll = window.pageYOffset ||
+                            document.documentElement.scrollTop; 
                         return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
                     }
                 }
